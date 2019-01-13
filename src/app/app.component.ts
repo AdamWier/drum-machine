@@ -7,21 +7,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'drum-machine';
-  
+
   soundDictionary = {
-    A: new Audio("../sounds/cheerful.mp3"),
-    Z: "unsure",
-    E: "very-excited",
-    Q: "surprised",
-    S: "concerned",
-    D: "look",
-    W: "unbelievable",
-    X: "proud",
-    C: "sad"
+    a: new Audio("../../../assets/cheerful.mp3"),
+    z: new Audio("../../../assets/unsure.mp3"),
+    e: new Audio("../../../assets/very-excited.mp3"),
+    q: new Audio("../../../assets/surprised.mp3"),
+    s: new Audio("../../../assets/concerned.mp3"),
+    d: new Audio("../../../assets/look.mp3"),
+    w: new Audio("../../../assets/unbelievable.mp3"),
+    x: new Audio("../../../assets/proud.mp3"),
+    c: new Audio("../../../assets/sad.mp3")
+  }
+
+  ngOnInit(){
   }
 
   playSound(key){
-    this.soundDictionary[key].audio();
-
+    this.soundDictionary[key].play();
   }
   }
