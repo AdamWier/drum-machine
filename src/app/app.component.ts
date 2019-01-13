@@ -27,3 +27,5 @@ export class AppComponent {
     this.soundDictionary[key].play();
   }
   }
+
+  /* Add R2D2 icons to express emotions to buttons, add key presses */
