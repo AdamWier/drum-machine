@@ -22,6 +22,9 @@ export class AppComponent {
 
   qwerty = true;
 
+  qwertyLayout = ["Q", "W", "E", "A", "S", "D", "Z", "X", "C"]
+  azertyLayout = ["A", "Z", "E", "Q", "S", "D", "W", "X", "C"]
+
   filterKey = /[^Key]/;
 
   constructor(){
