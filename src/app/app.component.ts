@@ -20,15 +20,29 @@ export class AppComponent {
     C: new Audio("../../../assets/sad.mp3")
   }
 
+  qwerty = true;
+
+  filterKey = /[^Key]/;
+
+  constructor(){
+    navigator.keyboard.getLayoutMap().then(keyboardLayoutMap =>{
+      if (keyboardLayoutMap.get("KeyQ") == "a"){
+        this.qwerty = false;
+      }
+      else { this.qwerty = true }
+      console.log(this.qwerty)
+    })
+  }
+
   @HostListener('window:keydown', ['$event'])
 
   KeyEvent(event: KeyboardEvent){
-    let filterKey = /[^Key]/;
-    let keyPressed = event.code.match(filterKey)[0];
+    console.log(navigator);
+    let keyPressed = event.code.match(this.filterKey)[0];
     if (this.soundDictionary.hasOwnProperty(keyPressed)) this.playSound(keyPressed);
   }
 
-  playSound(key: String){
+  playSound(key: string){
     this.soundDictionary[key].play();
   }
 }
