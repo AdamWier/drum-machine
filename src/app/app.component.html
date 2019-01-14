@@ -1,9 +1,7 @@
-<button (click)="playSound('Q')">Q</button>
-<button (click)="playSound('W')">W</button>
-<button (click)="playSound('E')">E</button>
-<button (click)="playSound('A')">A</button>
-<button (click)="playSound('S')">S</button>
-<button (click)="playSound('D')">D</button>
-<button (click)="playSound('Z')">Z</button>
-<button (click)="playSound('X')">X</button>
-<button (click)="playSound('C')">C</button>
+<div *ngIf="!qwerty">
+  <button *ngFor="let key of azertyLayout; let i = index" (click)="playSound(qwertyLayout[i])">{{ key }}</button>
+</div>
+
+<div *ngIf="qwerty">
+    <button *ngFor="let key of qwertyLayout; let i = index" (click)="playSound(key)">{{ key }}</button>
+  </div>

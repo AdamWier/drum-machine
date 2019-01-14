@@ -45,6 +45,7 @@ export class AppComponent {
   }
 
   playSound(key: string){
+    console.log(key)
     this.soundDictionary[key].play();
   }
 }
