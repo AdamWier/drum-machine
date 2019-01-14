@@ -25,7 +25,7 @@ export class AppComponent {
   filterKey = /[^Key]/;
 
   constructor(){
-    navigator.keyboard.getLayoutMap().then(keyboardLayoutMap =>{
+    (navigator as any).keyboard.getLayoutMap().then(keyboardLayoutMap =>{
       if (keyboardLayoutMap.get("KeyQ") == "a"){
         this.qwerty = false;
       }
