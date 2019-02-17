@@ -22,8 +22,62 @@ export class AppComponent {
 
   qwerty = true;
 
-  qwertyLayout = ["Q", "W", "E", "A", "S", "D", "Z", "X", "C"]
-  azertyLayout = ["A", "Z", "E", "Q", "S", "D", "W", "X", "C"]
+  qwertyLayout = [{
+    key: "Q",
+    label: "Surprised"
+   }, {
+    key: "W",
+    label: "Incredulous"
+      }, {
+    key: "E",
+    label: "Excited"
+      }, {
+    key: "A",
+    label: "Cheerful"
+      }, {
+    key: "S",
+    label: "Concerned"
+      }, {
+    key: "D",
+    label: "Alert"
+      }, {
+    key: "Z",
+    label: "Unsure"
+      }, {
+    key: "X",
+    label: "Proud"
+      }, {
+    key: "C",
+    label: "Sad"
+     }]
+  azertyLayout = [{
+    key: "A",
+    label: "Cheerful"
+   }, {
+    key: "Z",
+    label: "Unsure"
+      }, {
+    key: "E",
+    label: "Excited"
+      }, {
+    key: "Q",
+    label: "Surprised"
+      }, {
+    key: "S",
+    label: "Concerned"
+      }, {
+    key: "D",
+    label: "Alert"
+      }, {
+    key: "W",
+    label: "Incredulous"
+      }, {
+    key: "X",
+    label: "Proud"
+      }, {
+    key: "C",
+    label: "Sad"
+     }]
 
   filterKey = /[^Key]/;
 

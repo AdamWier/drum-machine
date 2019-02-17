@@ -1,7 +1,8 @@
+
 <div *ngIf="!qwerty">
-  <button *ngFor="let key of azertyLayout; let i = index" (click)="playSound(qwertyLayout[i])">{{ key }}</button>
+  <button *ngFor="let key of azertyLayout; let i = index" (click)="playSound(key.key)">{{ key.label }}</button>
 </div>
 
 <div *ngIf="qwerty">
-    <button *ngFor="let key of qwertyLayout; let i = index" (click)="playSound(key)">{{ key }}</button>
+    <button *ngFor="let key of qwertyLayout; let i = index" (click)="playSound(key.key)">{{ key.label }}</button>
   </div>
