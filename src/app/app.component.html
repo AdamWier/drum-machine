@@ -9,17 +9,16 @@
     <link rel="stylesheet" href="">
   </head>
   <body>
-    <div class="container">
+    <div class="container" *ngIf="!qwerty">
       <div class="row">
-    <div *ngIf="!qwerty">
       <button *ngFor="let key of azertyLayout; let i = index" (click)="playSound(key.key)" class="btn btn-primary">{{ key.label }}</button>
     </div>
-    
-    <div *ngIf="qwerty">
+  </div>
+    <div class="container" *ngIf="qwerty">
+      <div class="row">
         <button *ngFor="let key of qwertyLayout; let i = index" (click)="playSound(key.key)">{{ key.label }}</button>
     </div>
   </div>
-</div>
   </body>
 </html>
 
