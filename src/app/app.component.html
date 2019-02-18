@@ -11,13 +11,13 @@
   <body>
     <div class="container" *ngIf="!qwerty">
         <ng-container *ngFor="let key of azertyLayout; let i = index">
-      <button (click)="playSound(key.key)" class="btn btn-primary">{{ key.label }}</button>
+      <button (click)="playSound(key.key)" class="btn btn-primary">{{ key.key }}<br>{{ key.label }}</button>
       <br *ngIf="i === 2 || i === 5 || i === 8">
         </ng-container>
   </div>
     <div class="container" *ngIf="qwerty">
         <ng-container *ngFor="let key of qwertyLayout; let i = index">
-            <button (click)="playSound(key.key)" class="btn btn-primary">{{ key.label }}</button>
+            <button (click)="playSound(key.key)" class="btn btn-primary">{{ key.key }}<br>{{ key.label }}</button>
             <br *ngIf="i === 2 || i === 5 || i === 8">
           </ng-container>
   </div>
