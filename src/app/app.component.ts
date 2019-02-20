@@ -50,33 +50,43 @@ export class AppComponent {
     key: "C",
     label: "Sad"
      }]
+
   azertyLayout = [{
-    key: "A",
-    label: "Cheerful"
+    keyLabel: "A",
+    label: "Cheerful",
+    keyPressed: "Q",
    }, {
-    key: "Z",
-    label: "Unsure"
+    keyLabel: "Z",
+    label: "Unsure",
+    keyPressed: "W",
       }, {
-    key: "E",
-    label: "Excited"
+    keyLabel: "E",
+    label: "Excited",
+    keyPressed: "E",
       }, {
-    key: "Q",
-    label: "Surprised"
+    keyLabel: "Q",
+    label: "Surprised",
+    keyPressed: "A",
       }, {
-    key: "S",
-    label: "Concerned"
+    keyLabel: "S",
+    label: "Concerned",
+    keyPressed: "S",
       }, {
-    key: "D",
-    label: "Alert"
+    keyLabel: "D",
+    label: "Alert",
+    keyPressed: "D",
       }, {
-    key: "W",
-    label: "Incredulous"
+    keyLabel: "W",
+    label: "Incredulous",
+    keyPressed: "Z",
       }, {
-    key: "X",
-    label: "Proud"
+    keyLabel: "X",
+    label: "Proud",
+    keyPressed: "X",
       }, {
-    key: "C",
-    label: "Sad"
+    keyLabel: "C",
+    label: "Sad",
+    keyPressed: "C",
      }]
 
   filterKey = /[^Key]/;
