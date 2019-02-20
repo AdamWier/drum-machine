@@ -9,18 +9,23 @@
     <link rel="stylesheet" href="">
   </head>
   <body>
-    <div class="container" *ngIf="!qwerty">
-        <ng-container *ngFor="let key of azertyLayout; let i = index">
-      <button (click)="playSound(key.keyPressed)" class="btn btn-primary">{{ key.keyLabel }}<br>{{ key.label }}</button>
-      <br *ngIf="i === 2 || i === 5 || i === 8">
-        </ng-container>
-  </div>
-    <div class="container" *ngIf="qwerty">
-        <ng-container *ngFor="let key of qwertyLayout; let i = index">
-            <button (click)="playSound(key.key)" class="btn btn-primary">{{ key.key }}<br>{{ key.label }}</button>
+    <div class="container">
+        <h1><span id="title-box">R2D2 Communicator</span></h1>
+        <div class="dashboard">
+        <ng-container *ngIf="!qwerty">
+          <ng-container *ngFor="let key of azertyLayout; let i = index">
+            <button (click)="playSound(key.keyPressed)" class="btn btn-primary"><span class="key-label">{{ key.keyLabel }}</span><br>{{ key.label }}</button>
             <br *ngIf="i === 2 || i === 5 || i === 8">
           </ng-container>
-  </div>
+        </ng-container>
+        <ng-container *ngIf="qwerty">
+        <ng-container *ngFor="let key of qwertyLayout; let i = index">
+            <button (click)="playSound(key.key)" class="btn btn-primary"><span class="key-label">{{ key.key }}</span><br>{{ key.label }}</button>
+            <br *ngIf="i === 2 || i === 5 || i === 8">
+          </ng-container>
+        </ng-container>
+      </div>
+    </div>
   </body>
 </html>
 

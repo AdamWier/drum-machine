@@ -104,12 +104,13 @@ export class AppComponent {
   @HostListener('window:keydown', ['$event'])
 
   KeyEvent(event: KeyboardEvent){
+    console.log(event.code);
+    console.log(event.code.match(this.filterKey))
     let keyPressed = event.code.match(this.filterKey)[0];
     if (this.soundDictionary.hasOwnProperty(keyPressed)) this.playSound(keyPressed);
   }
 
   playSound(key: string){
-    console.log(key)
     this.soundDictionary[key].play();
   }
 }

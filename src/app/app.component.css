@@ -1,9 +1,32 @@
 button{
     margin : 5%;
-    width: 20%;
+    min-width: 20%;
 }
 
 .container{
-    margin: auto; 
     text-align: center;
+}
+
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 5vw;
+}
+
+#title-box{
+    border: solid;
+    border-color: white;
+    padding: 10pt;
+}
+
+.container{
+    margin: 10%;
+}
+
+.dashboard{
+    padding: 10%;
+}
+
+.key-label{
+    font-weight: bold;
 }
