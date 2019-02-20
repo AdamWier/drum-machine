@@ -89,7 +89,7 @@ export class AppComponent {
     keyPressed: "C",
      }]
 
-  filterKey = /[^Key]/;
+  filterKey = /[^Key]\w*/;
 
   constructor(){
     (navigator as any).keyboard.getLayoutMap().then(keyboardLayoutMap =>{
