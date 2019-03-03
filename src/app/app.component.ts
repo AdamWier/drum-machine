@@ -9,15 +9,42 @@ export class AppComponent {
   title = 'drum-machine';
 
   soundDictionary = {
-    Q: new Audio("../../../assets/surprised.mp3"),
-    W: new Audio("../../../assets/unbelievable.mp3"),
-    E: new Audio("../../../assets/very-excited.mp3"),
-    A: new Audio("../../../assets/cheerful.mp3"),
-    S: new Audio("../../../assets/concerned.mp3"),
-    D: new Audio("../../../assets/look.mp3"),
-    Z: new Audio("../../../assets/unsure.mp3"),
-    X: new Audio("../../../assets/proud.mp3"),
-    C: new Audio("../../../assets/sad.mp3")
+    Q: {
+      sound: new Audio("../../../assets/surprised.mp3"),
+      message: "suprise"
+    },
+    W: {
+      sound: new Audio("../../../assets/unbelievable.mp3"),
+      message: "incredulousness"
+    },
+    E: {
+      sound: new Audio("../../../assets/very-excited.mp3"),
+      message: "excitement"
+    },
+    A: {
+      sound: new Audio("../../../assets/cheerful.mp3"),
+      message: "cheerfulness"
+    },
+    S: {
+      sound: new Audio("../../../assets/concerned.mp3"),
+      message: "concern"
+    },
+    D: {
+      sound: new Audio("../../../assets/look.mp3"),
+      message: "an alert"
+    },
+    Z: {
+      sound: new Audio("../../../assets/unsure.mp3"),
+      message: "insecurity"
+    },
+    X: {
+      sound: new Audio("../../../assets/proud.mp3"),
+      message: "pride"
+    },
+    C: {
+      sound: new Audio("../../../assets/sad.mp3"),
+      message: "sadness"
+    }
   }
 
   qwerty = true;
@@ -91,6 +118,8 @@ export class AppComponent {
 
   filterKey = /[^Key]\w*/;
 
+  message = "nothing";
+
   constructor(){
     (navigator as any).keyboard.getLayoutMap().then(keyboardLayoutMap =>{
       if (keyboardLayoutMap.get("KeyQ") == "a"){
@@ -109,7 +138,8 @@ export class AppComponent {
   }
 
   playSound(key: string){
-    this.soundDictionary[key].play();
+    this.soundDictionary[key].sound.play();
+    this.message = this.soundDictionary[key].message;
   }
 }
 

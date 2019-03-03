@@ -6,13 +6,14 @@ button{
 .container{
     text-align: center;
     padding: 0 !important;
-    margin: 3% auto !important
+    margin: 3% auto !important;
 }
 
 h1{
     text-align: center;
     font-weight: bold;
     font-size: 5vw;
+    font-family: 'Monofett', cursive;
 }
 
 #title-box{

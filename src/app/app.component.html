@@ -6,15 +6,15 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+    <link href="https://fonts.googleapis.com/css?family=Monofett" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="drum-machine">
         <h1><span id="title-box">R2D2 Communicator</span></h1>
         <div class="dashboard">
         <ng-container *ngIf="!qwerty">
           <ng-container *ngFor="let key of azertyLayout; let i = index">
-            <button (click)="playSound(key.keyPressed)" class="btn btn-primary"><span class="key-label">{{ key.keyLabel }}</span><br>{{ key.label }}</button>
+            <button (click)="playSound(key.keyPressed)" class="btn btn-primary drum-pad"><span class="key-label">{{ key.keyLabel }}</span><br>{{ key.label }}</button>
             <br *ngIf="i === 2 || i === 5 || i === 8">
           </ng-container>
         </ng-container>
@@ -24,6 +24,7 @@
             <br *ngIf="i === 2 || i === 5 || i === 8">
           </ng-container>
         </ng-container>
+        <div id="display">You're communicating {{ message }} </div>
       </div>
     </div>
   </body>
